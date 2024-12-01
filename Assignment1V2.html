@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Skin Store</title>
+    <link rel="stylesheet" href="Assignment1V2.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Logo Section (Valorant Icon) -->
+        <div class="logo">
+            <img src="images/valorant-logo.jpg" alt="Valorant Logo" class="logo-icon">
+            <h1>VALORANT Skin Store</h1>
+        </div>
+        
+        <!-- Navigation Links -->
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skin-tier">Skin Tier</a></li>
+                <li><a href="login.html">Login</a></li> <!-- Link to login page -->
+                <li><a href="#bundle-shop">Bundle Shop</a></li>
+                <li><a href="#socials">Socials</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Login Section (This will now just link to the login page) -->
+        <div class="login-section">
+            <div class="login-section">
+                <form action="#" method="POST">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <a href="login.html">Login</a> <!-- Login button links to login.html -->
+                </form>
+                </div>
+                </header>
+        
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Welcome to the Valorant Skin Store</h2>
+            <p>Explore exclusive skins, bundles, and more!</p>
+        </div>
+    </section>
+
+    <!-- Skin Tier Section -->
+    <section id="skin-tier">
+        <h2>SKIN TIERS</h2>
+        <div class="tier-grid">
+            <!-- Common Tier -->
+            <div class="tier-box common">
+                Common Tier
+                <div class="skin-preview">
+                    <ul>
+                        <li>Classic Standard</li>
+                        <li>Shorty Standard</li>
+                        <li>Vandal Standard</li>
+                        <li>Phantom Standard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rare Tier -->
+            <div class="tier-box rare">
+                Rare Tier
+                <div class="skin-preview">
+                    <ul>
+                        <li>Prime Vandal</li>
+                        <li>Glitchpop Frenzy</li>
+                        <li>Reaver Sheriff</li>
+                        <li>RGX 11z Pro Vandal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Epic Tier -->
+            <div class="tier-box epic">
+                Epic Tier
+                <div class="skin-preview">
+                    <ul>
+                        <li>Gaia's Vengeance Vandal</li>
+                        <li>Chronovoid Phantom</li>
+                        <li>Ion Phantom</li>
+                        <li>Reaver Guardian</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Legendary Tier -->
+            <div class="tier-box legendary">
+                Legendary Tier
+                <div class="skin-preview">
+                    <ul>
+                        <li>Elderflame Vandal</li>
+                        <li>Champions 2021 Vandal</li>
+                        <li>ChronoVoid Sheriff</li>
+                        <li>Oni Phantom</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Secret Tier -->
+            <div class="tier-box secret">
+                Secret Tier
+                <div class="skin-preview">
+                    <ul>
+                        <li>VCT LOCK//IN Misericordia Knife</li>
+                        <li>Glitchpop Knife</li>
+                        <li>Celestial Knife</li>
+                        <li>Singularity Spectre</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Available to Purchase Label -->
+        <div id="available-to-purchase">
+            Available to Purchase
+        </div>
+    </section>
+    
+    <!-- Owned Skins Section (Hidden Initially) -->
+    <section id="owned-skin" style="display: none;">
+        <h2>Owned Skins</h2>
+        <div class="owned-grid">
+            <!-- Skin Details (Will remain hidden until logged in) -->
+        </div>
+    </section>
+
+    <!-- Bundle Shop Section -->
+    <section id="bundle-shop">
+        <h2>Current Bundle</h2>
+        <div class="carousel-container">
+            <!-- Left Arrow -->
+            <button class="arrow left-arrow" onclick="scrollBundles('left')">&#10094;</button>
+
+            <!-- Bundles Slider -->
+            <div class="bundle-slider">
+                <div class="bundle-item">
+                    <img src="images/primordium.jpg" alt="Primordium Bundle">
+                    <p>Primordium Bundle</p>
+                    <div class="bundle-details">
+                        <p class="bundle-price">Bundle Price: 8700 VP</p>
+                        <button class="purchase-btn">Purchase Now</button>
+                    </div>
+                </div>
+                <div class="bundle-item">
+                    <img src="images/protocol.jpg" alt="Protocol Bundle">
+                    <p>Protocol Bundle</p>
+                    <div class="bundle-details">
+                        <p class="bundle-price">Bundle Price: 9900 VP</p>
+                        <button class="purchase-btn">Purchase Now</button>
+                    </div>
+                </div>
+                <div class="bundle-item">
+                    <img src="images/neptune.jpg" alt="Neptune Bundle">
+                    <p>Neptune Bundle</p>
+                    <div class="bundle-details">
+                        <p class="bundle-price">Bundle Price: 7100 VP</p>
+                        <button class="purchase-btn">Purchase Now</button>
+                    </div>
+                </div>
+                <div class="bundle-item">
+                    <img src="images/SentinelsOfLight.jpg" alt="Sentinels Of Light Bundle">
+                    <p>Sentinels Of Light Bundle</p>
+                    <div class="bundle-details">
+                        <p class="bundle-price">Bundle Price: 8700 VP</p>
+                        <button class="purchase-btn">Purchase Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="arrow right-arrow" onclick="scrollBundles('right')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="socials">
+        <h2>Follow Us</h2>
+        <div class="socials-container">
+            <a href="https://twitter.com" target="_blank" class="social-link">Twitter</a>
+            <a href="https://instagram.com" target="_blank" class="social-link">Instagram</a>
+            <a href="https://youtube.com" target="_blank" class="social-link">YouTube</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Valorant Skin Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
