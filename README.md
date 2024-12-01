@@ -50,4 +50,4 @@ This project simulates a Valorant-themed skin store where users can:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/valorant-skin-store.git
+   git clone https://github.com/AndersonChong/Assignment1Submission.git
