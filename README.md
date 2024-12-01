@@ -51,3 +51,7 @@ This project simulates a Valorant-themed skin store where users can:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/AndersonChong/Assignment1Submission.git
+
+
+
+   https://www.figma.com/design/1KpOXMO3YxjZKRFm19WtJ5/Untitled?node-id=0-1&node-type=canvas&t=rYFJMyg3bN0dxyLN-0  (link to FIGMA Low-FI Project)
