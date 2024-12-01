@@ -1,0 +1,600 @@
+body, h1, h2, p, ul, li, a, form {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+body {
+    background-color: #121212;  
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;  /* Space between logo, nav, and login */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Section (Valorant Icon) */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo .logo-icon {
+    width: 40px;  /* Set size of the logo */
+    height: 40px;
+    margin-right: 10px;  /* Space between logo and title */
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    color: #ff4c00;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ff4c00;
+    font-size: 1.2rem;
+    padding: 10px;
+    display: block;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    align-items: center;
+}
+
+.login-section form {
+    display: flex;
+    align-items: center;
+}
+
+.login-section input {
+    padding: 8px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.login-section button {
+    padding: 8px 15px;
+    background-color: #ff4c00;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background-color: #e83e00;
+}
+
+/* Profile Section Styling */
+#profile-section {
+    background: #333;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Flexbox to align the profile info and logout button horizontally */
+.profile-info {
+    display: flex;
+    align-items: center;  /* Align items vertically centered */
+    justify-content: space-between;  /* Space out items */
+    gap: 20px;  /* Adds space between the elements */
+}
+
+/* Styling for the logout button */
+#logout-btn {
+    background-color: #ff4c00;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #e83e00;
+}
+
+
+/* Hero Section */
+#hero {
+    position: relative;
+    background: url('images/hero-background.jpg') center center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+/* Skin Tier Section */
+#skin-tier {
+    background: #222;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.tier-box {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.common {
+    background-color: #808080; /* Grey */
+}
+
+.rare {
+    background-color: #0000FF; /* Blue */
+}
+
+.epic {
+    background-color: #800080; /* Purple */
+}
+
+.legendary {
+    background-color: #FFD700; /* Yellow */
+}
+
+.secret {
+    background-color: #FF0000; /* Red */
+}
+
+
+
+/* Skin Tier Section */
+#skin-tier {
+    background: #222;
+    padding: 80px 20px; /* Increased padding for height */
+    text-align: center;
+    display: flex; /* Use Flexbox to align elements vertically */
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 30px; /* Adds space between the elements */
+    width: 100%;
+    height: 400px; /* Increased height to allow space for the label and boxes */
+}
+
+/* "Available to Purchase" Section */
+#available-to-purchase {
+    color: #ff4c00;  /* Orange color */
+    font-size: 3rem;  /* Size of the text */
+    font-weight: bold;  /* Bold text */
+    text-align: center; /* Center the label */
+    width: 100%;  /* Ensure it takes up the full width */
+}
+
+/* Skin Tier Grid */
+.tier-grid {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the tier boxes */
+    gap: 20px; /* Adds space between the boxes */
+    flex-wrap: wrap; /* Allows wrapping to a new line if necessary */
+    width: 70%; /* Ensure it takes up a portion of the container */
+}
+
+/* Tier Boxes Styling (Thinner boxes) */
+.tier-box {
+    padding: 15px;
+    width: 120px;  /* Thinner width for small box */
+    height: 120px; /* Fixed height for small box */
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Needed for positioning dropdown */
+    transition: transform 0.3s, opacity 0.3s;
+    color: #fff;
+}
+
+/* Tier Box Colors */
+.tier-box.common { background-color: #808080; color: #000; }
+.tier-box.rare { background-color: #0000FF; color: #fff; }
+.tier-box.epic { background-color: #800080; color: #fff; }
+.tier-box.legendary { background-color: #FFD700; color: #111; }
+.tier-box.secret { background-color: #FF0000; color: #fff; }
+
+/* Hover effect on tier boxes */
+.tier-box:hover { transform: scale(1.05); }
+
+/* Skin Preview - Small Dropdown */
+.skin-preview {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Directly below the tier box */
+    left: 50%; /* Center under the box */
+    transform: translateX(-50%); /* Align to the middle */
+    background: rgba(0, 0, 0, 0.9); /* Dark background */
+    padding: 10px;
+    border-radius: 8px;
+    width: 180px; /* Smaller fixed width */
+    color: white;
+    text-align: center;
+    z-index: 200; /* Ensure it appears above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Show preview on hover */
+.tier-box:hover .skin-preview {
+    display: block;
+}
+
+
+
+/* Make the tier box the containing element for positioning */
+.tier-box {
+    position: relative; /* Contain the skin preview */
+}
+
+/* Show the preview on hover */
+.tier-box:hover .skin-preview {
+    display: block; /* Display the preview when hovering */
+}
+
+
+/* Ensure the tier box uses relative positioning */
+.tier-box {
+    position: relative;
+}
+
+/* Ensure each tier box handles the relative positioning */
+.tier-box {
+    position: relative; /* Ensures skin-preview is positioned relative to the tier box */
+}
+
+
+.skin-preview ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skin-preview ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ff4c00;
+}
+
+
+/* Show Preview on Hover */
+.tier-box:hover + .skin-preview {
+    display: block;
+}
+
+
+/* Owned Skins Section */
+#owned-skin {
+    background: #444;
+    padding: 60px 20px;
+}
+
+.owned-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.owned-item {
+    position: relative;
+    display: inline-block; /* Add inline-block so that dropdown can overlay correctly */
+}
+
+.owned-item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    z-index: 0; /* Ensure the image is behind the dropdown */
+}
+
+.owned-item img:hover {
+    transform: scale(1.1);
+}
+
+.owned-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Skin List Dropdown */
+.skin-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    border-radius: 8px;
+    z-index: 10; /* Ensure the dropdown is above other content */
+}
+
+.skin-list li {
+    padding: 10px;
+    text-align: center;
+    color: #ff4c00;
+}
+
+/* Style just the skin name to be underlined, bold, and colored */
+.equipped-skin .skin-name {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #ff4500; /* Orange color or any other color you prefer */
+}
+
+
+.owned-item:hover .skin-list {
+    display: block;
+}
+
+/* Bundle Section Styling */
+#bundle-shop {
+    background: #111;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bundle-slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.bundle-item {
+    width: 300px;
+    text-align: center;
+}
+
+.bundle-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 0;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 0;
+}
+
+/* Bundle Item Styling */
+.bundle-item {
+    position: relative; /* Allows positioning of child elements */
+    width: 300px;
+    text-align: center;
+    overflow: hidden; /* Hides overflow content initially */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect */
+}
+
+/* Price and Purchase Button (Hidden by Default) */
+.bundle-details {
+    display: none; /* Hide details by default */
+    position: absolute;
+    bottom: 20px; /* Position the details near the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%); /* Center the details */
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bundle-price {
+    color: #ff4c00;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.purchase-btn {
+    padding: 10px 20px;
+    background-color: #ff4c00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.purchase-btn:hover {
+    background-color: #e83e00; /* Hover effect for the button */
+}
+
+/* Show details when hovering over the bundle */
+.bundle-item:hover .bundle-details {
+    display: block; /* Display the price and button when hovered */
+}
+
+.bundle-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the bundle item on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #ff4c00;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ff4c00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #e83e00;
+}
+
+
+/* Socials Styling */
+#socials {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.socials-container a {
+    color: #ff4c00;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.socials-container a:hover {
+    background-color: #ff4c00;
+    color: #111;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Stack navigation items vertically on smaller screens */
+        align-items: center;
+    }
+
+    header nav ul li a {
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .bundle-item {
+        width: 250px; /* Adjust bundle size for smaller screens */
+    }
+
+    /* Stack the Login Form and Logo */
+    .login-section {
+        margin-top: 10px;
+    }
+} 
+
